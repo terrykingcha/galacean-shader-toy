@@ -3,6 +3,10 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [reactRefresh()],
   resolve: {
     dedupe: ["@galacean/engine"],
