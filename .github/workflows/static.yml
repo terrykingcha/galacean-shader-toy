@@ -28,30 +28,28 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node_version: ['18.x']
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        
-      - name: Use Node.js ${{ matrix.node_version }}
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: 18.x
           
       - name: npm install, build
         run: |
           npm install
           npm run build
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Upload dist directory
           path: './dist'
           
       - name: Deploy to GitHub Pages
