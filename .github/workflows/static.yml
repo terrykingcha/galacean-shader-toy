@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: ['18.x', '20.x']
+        node_version: ['18.x']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
