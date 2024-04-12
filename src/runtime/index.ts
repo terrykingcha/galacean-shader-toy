@@ -3,8 +3,7 @@
  * @category Material
  */
 
-import { OrbitControl } from '@galacean/engine-toolkit-controls';
-import { GridControl } from "@galacean/engine-toolkit";
+import { GridControl, OrbitControl } from "@galacean/engine-toolkit";
 import {
   BufferMesh,
   Camera,
