@@ -1,2 +1,2 @@
-declare const shaderLoader: any;
+declare const shaderLoader: Record<string, string>;
 export default shaderLoader;
